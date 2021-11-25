@@ -24,12 +24,10 @@ function App() {
             {/* The portfolio and resume will only be visible from the routes */}
 
             {/* Switch has been replaced with Routes */}
-            <Route path="/portfolio">
-                <Portfolio/>
-            </Route>
-            <Route path="/">
-              <Resume/>
-            </Route>
+            <Routes>
+              <Route exact path="/portfolio" element= {<Portfolio/>}/>
+              <Route exact path="/" element = {<Resume/>}/>
+            </Routes>
         
           </Router>
           <Header/>
